@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Nguyen Minh Tien Test</title>
+</head>
+<body>
+   @using(Html.BeginForm())
+            {
+                @Html.TextBox("Email") <br/>
+                @Html.TextBox("Password") <br/>
+                <input type="submit" value="Đăng Nhập" id="submit" name="submit"><br/>
+                @ViewBag.Email<br/>
+                @ViewBag.password
+            }
+</body>
+</html> 
