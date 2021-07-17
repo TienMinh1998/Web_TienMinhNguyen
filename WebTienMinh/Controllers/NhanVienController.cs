@@ -74,25 +74,38 @@ namespace WebTienMinh.Controllers
         // Hàm chỉnh sửa nhân viên
         public string chinhsuanhanvien()
         {
-            // Lấy về đối tượng đang được chỉnh sửa
-            int id = int.Parse(Request["txtId"]);
-            string tennhanvien = Request["txtten"];
-            string diachi = Request["txtdiachi"];
-            string quequan = Request["txtquequan"];
-            string chitietquequan = Request["txtchitietquequan"];
-            string chucvu = Request["txtchucvu"];
-            int danhgia = int.Parse(Request["txtdanhgia"]);
-            string gioitinh = Request["txtGioiTinh"];
-
+            int id = int.Parse( Request["id_nv"]);
+            string ten = Request["ten"];
+            string diachi = Request["diachi"];
+            string quequan = Request["quequan"];
+            string chietietquequan = Request["chitietquequan"];
+            string chuvu = Request["chucvu"];
+            int danhgia = int.Parse(Request["danhgia"]);
+           string gioitinh =Request["gioitinh"];
             MTDbConnection db = new MTDbConnection();
-            bool isAddNewSuccess;
-            isAddNewSuccess = db.UpdateNhanVien(id,tennhanvien, diachi, quequan, chitietquequan, chucvu, danhgia,gioitinh);
-            if (isAddNewSuccess)
-            {
-                return "Thành Công";
+            db.UpdateNhanVien(id, ten, diachi, quequan, chietietquequan, chuvu, danhgia, gioitinh);
 
-            }
-            return "Chỉnh sửa thất bại";
+            return "Thành Công";
+            //// Lấy về đối tượng đang được chỉnh sửa
+            //int id = int.Parse(Request["txtId"]);
+            //string tennhanvien = Request["txtten"];
+            //string diachi = Request["txtdiachi"];
+            //string quequan = Request["txtquequan"];
+            //string chitietquequan = Request["txtchitietquequan"];
+            //string chucvu = Request["txtchucvu"];
+            //int danhgia = int.Parse(Request["txtdanhgia"]);
+            //string gioitinh = Request["txtGioiTinh"];
+
+            //MTDbConnection db = new MTDbConnection();
+            //bool isAddNewSuccess;
+            //isAddNewSuccess = db.UpdateNhanVien(id, tennhanvien, diachi, quequan, chitietquequan, chucvu, danhgia, gioitinh);
+            //if (isAddNewSuccess)
+            //{
+            //    return "Thành Công";
+
+            //}
+            //return "Chỉnh sửa thất bại";
+
         }
         [HttpPost]
         public string get_info_student()

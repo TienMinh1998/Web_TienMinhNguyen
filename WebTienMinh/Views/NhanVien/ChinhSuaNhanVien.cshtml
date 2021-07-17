@@ -17,7 +17,7 @@
                 </div>
             </div>
             <!--begin::Form-->
-            <form id="act_form" method="post" action="#" enctype="multipart/form-data">
+            <form  id="act_form" method="post" action="#" enctype="multipart/form-data">
                 <div class="card-body">
                     <div class="form-group">
                         <label class="form-control-label">
@@ -110,11 +110,12 @@
                     </div>
                     <!--end::Code example-->
                 </div>
-                <div class="card-footer">
-                    <button id="btnAdd" name="btnAdd" type="submit" class="btn btn-success font-weight-bold mr-2">Xác nhận thêm</button>
-                    <button type="submit" class="btn btn-light-success font-weight-bold">Đóng</button>
-                </div>
+
             </form>
+            <div class="card-footer">
+                <button id="btn_edit" name="btn_edit" class="btn btn-success font-weight-bold mr-2">Xác Nhận Chỉnh Sửa</button>
+                <a href="/NhanVien" idd="btnHuy" class="btn btn-light-success font-weight-bold">Hủy.</a>
+            </div>
             <!--end::Form-->
         </div>
         <!--end::Card-->
@@ -131,7 +132,31 @@
     var id_dm = url.searchParams.get("id");
     
 
+  
+
     $(document).ready(function () {
+
+        $("#btn_edit").click(function () {
+            var ten = $("#txtTen").val();
+            var id_nv = id_dm;
+            var diachi = $("#txt_dia_chi").val();
+            var quequan = $("#txt_que_quan").val();
+            var chitietquequan = $("#txtchitietquequan").val();
+            var chucvu = $("#txtchucvu").val();
+            var danhgia = $("#txtdanhgia").val();
+            var gioitinh = $("#txt_gioi_tinh").val()
+            if (gioitinh="Nam" || "Nữ") {
+                gioitinh = 1;
+            }
+            $.ajax({
+                url: '/NhanVien/ChinhSuaNhanVien',
+                type: "POST", 
+                data: {id_nv: id_nv, ten : ten, diachi:diachi, quequan  :quequan,chitietquequan : chitietquequan, chucvu: chucvu,danhgia:danhgia,gioitinh:gioitinh },
+                success: function (response) {
+                    window.location = '/NhanVien';
+                }
+            });
+        })
 
         // bắn ajax để lấy thông tin của nhan viên theo ID
         $.ajax({
@@ -159,7 +184,9 @@
 
             }
         });   
-    })
+    })  // cái này của document .ready
+
+ 
 
 
 </script>
