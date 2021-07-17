@@ -1,0 +1,165 @@
+﻿
+@{
+    ViewBag.Title = "ChinhSuaNhanVien";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="col-lg-12">
+        <!--begin::Card-->
+        <div class="card card-custom gutter-b example example-compact">
+            <div class="card-header">
+                <h3 class="card-title">Trang sửa thông tin của nhân viên!</h3>
+                <div class="card-toolbar">
+                    <div class="example-tools justify-content-center">
+                        <span class="example-toggle" data-toggle="tooltip" title="" data-original-title="View code"></span>
+                        <span class="example-copy" data-toggle="tooltip" title="" data-original-title="Copy code"></span>
+                    </div>
+                </div>
+            </div>
+            <!--begin::Form-->
+            <form id="act_form" method="post" action="#" enctype="multipart/form-data">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            Tên Nhân Viên
+                            <span class="text-danger">*</span>
+                        </label>
+                        <input id="txtTen" name="txtTen" type="text" class="form-control is-valid">
+                        <div class="valid-feedback">Success! You've done it.</div>
+                        <span class="form-text text-muted">Example help text that remains unchanged.</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            Địa Chỉ của nhân viên
+                            <span class="text-danger">*</span>
+                        </label>
+                        <input id="txt_dia_chi" name="txtdiachi" type="text" class="form-control is-valid">
+                        <div class="valid-feedback">Success! You've done it.</div>
+                        <span class="form-text text-muted">Example help text that remains unchanged.</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            Quê quán của nhân viên.
+                            <span class="text-danger">*</span>
+                        </label>
+                        <input id="txt_que_quan" name="txtquequan" type="text" class="form-control is-valid">
+                        <div class="valid-feedback">Success! You've done it.</div>
+                        <span class="form-text text-muted">Example help text that remains unchanged.</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            Số Nhà của Nhân Viên
+                            <span class="text-danger">*</span>
+                        </label>
+                        <input id="txtchitietquequan" name="txtchitietquequan" type="text" class="form-control is-valid">
+                        <div class="valid-feedback">Success! You've done it.</div>
+                        <span class="form-text text-muted">Example help text that remains unchanged.</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            Chức vụ nhân Viên
+                            <span class="text-danger">*</span>
+                        </label>
+                        <input id="txtchucvu" name="txtchucvu" type="text" class="form-control is-valid">
+                        <div class="valid-feedback">Success! You've done it.</div>
+                        <span class="form-text text-muted">Example help text that remains unchanged.</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            Đánh giá nhân viên, để là số
+                            <span class="text-danger">*</span>
+                        </label>
+                        <input id="txtdanhgia" name="txtdanhgia" type="text" class="form-control is-valid">
+                        <div class="valid-feedback">Success! You've done it.</div>
+                        <span class="form-text text-muted">Example help text that remains unchanged.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            Giới Tính
+                            <span class="text-danger">*</span>
+                        </label>
+                        <input id="txt_gioi_tinh" name="txt_gioi_tinh" type="text" class="form-control is-valid">
+                        <div class="valid-feedback">Success! You've done it.</div>
+                        <span class="form-text text-muted">Example help text that remains unchanged.</span>
+                    </div>
+                    <!--begin::Code example-->
+                    <div class="example-code mt-10">
+                        <div class="example-highlight">
+                            <pre style="height:300px" class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>card-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-group<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-control-label<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>Input with success <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-danger<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-control is-valid<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>valid-feedback<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Success! You've done it.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-text text-muted<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Example help text that remains unchanged.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-group<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-control-label<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>Input with error <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-danger<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-control is-invalid<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>invalid-feedback<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Shucks, check the formatting of that and try again.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-text text-muted<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Example help text that remains unchanged.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>card-footer<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-success font-weight-bold mr-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Submit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-light-success font-weight-bold<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Cancel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                    </div>
+                    <!--end::Code example-->
+                </div>
+                <div class="card-footer">
+                    <button id="btnAdd" name="btnAdd" type="submit" class="btn btn-success font-weight-bold mr-2">Xác nhận thêm</button>
+                    <button type="submit" class="btn btn-light-success font-weight-bold">Đóng</button>
+                </div>
+            </form>
+            <!--end::Form-->
+        </div>
+        <!--end::Card-->
+
+
+
+    </div>
+</div>
+
+
+<script>
+
+    var url = new URL(window.location.href);
+    var id_dm = url.searchParams.get("id");
+    
+
+    $(document).ready(function () {
+
+        // bắn ajax để lấy thông tin của nhan viên theo ID
+        $.ajax({
+          
+            url: "/NhanVien/get_info_student",
+            type: "post",
+            data: { id_dm:id_dm },
+            success: function (result) {
+              
+                var nv = JSON.parse(result);
+                
+                $("#txtTen").val(nv.Ten);
+                $("#txt_dia_chi").val(nv.DiaChi);
+                $("#txt_que_quan").val(nv.QueQuan);
+                $("#txtchitietquequan").val(nv.ChiTietQueQuan);
+                $("#txtchucvu").val(nv.ChucVu);
+                $("#txtdanhgia").val(nv.DanhGia);
+                var gioitinhnhanvien = nv.GioiTinh
+                if (gioitinhnhanvien == "1") {
+                    $("#txt_gioi_tinh").val("Nam");
+                } else {
+                    $("#txt_gioi_tinh").val("Nữ");
+                }
+          
+
+            }
+        });   
+    })
+
+
+</script>

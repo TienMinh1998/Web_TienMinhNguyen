@@ -1,4 +1,6 @@
-﻿using MTDataConnection;
+﻿using DataConnection.Model;
+using MTDataConnection;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,11 @@ namespace WebTienMinh.Controllers
     {
         // GET: NhanVien
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult ChinhSuaNhanVien()
         {
             return View();
         }
@@ -63,6 +70,39 @@ namespace WebTienMinh.Controllers
            
         }
 
+        [HttpPost]
+        // Hàm chỉnh sửa nhân viên
+        public string chinhsuanhanvien()
+        {
+            // Lấy về đối tượng đang được chỉnh sửa
+            int id = int.Parse(Request["txtId"]);
+            string tennhanvien = Request["txtten"];
+            string diachi = Request["txtdiachi"];
+            string quequan = Request["txtquequan"];
+            string chitietquequan = Request["txtchitietquequan"];
+            string chucvu = Request["txtchucvu"];
+            int danhgia = int.Parse(Request["txtdanhgia"]);
+            string gioitinh = Request["txtGioiTinh"];
 
+            MTDbConnection db = new MTDbConnection();
+            bool isAddNewSuccess;
+            isAddNewSuccess = db.UpdateNhanVien(id,tennhanvien, diachi, quequan, chitietquequan, chucvu, danhgia,gioitinh);
+            if (isAddNewSuccess)
+            {
+                return "Thành Công";
+
+            }
+            return "Chỉnh sửa thất bại";
+        }
+        [HttpPost]
+        public string get_info_student()
+        {
+            int id = int.Parse(Request["id_dm"]);
+            NhanVien nv = new NhanVien();
+            MTDbConnection db = new MTDbConnection();
+            nv = db.get_Employee(id);
+            return JsonConvert.SerializeObject(nv);
+          
+        }
     }
 }

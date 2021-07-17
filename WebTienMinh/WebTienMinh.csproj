@@ -175,6 +175,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BangChamCongController.cs" />
     <Compile Include="Controllers\BienDungChung.cs" />
     <Compile Include="Controllers\HocMvcThuanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -2219,6 +2220,8 @@
     <Content Include="Views\NhanVien\Index.cshtml" />
     <Content Include="Views\NhanVien\ThemMoiNhanVien.cshtml" />
     <Content Include="Views\HocMvcThuan\Index.cshtml" />
+    <Content Include="Views\BangChamCong\Index.cshtml" />
+    <Content Include="Views\NhanVien\ChinhSuaNhanVien.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
